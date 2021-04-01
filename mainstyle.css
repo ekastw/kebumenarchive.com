@@ -19,13 +19,12 @@
 			.section.active{opacity: 1;transition: all 2s ease}
 			.sticky-col{position: -webkit-sticky;position: sticky;}
 
-			body{overflow: hidden;overflow-y: auto;font-family: 'Poppins',sans-serif;min-height: 100vh;transition:all 2s ease; -webkit-touch-callout: none; /* iOS Safari */
-				-webkit-user-select: none; /* Safari */
-				-khtml-user-select: none; /* Konqueror HTML */
-				-moz-user-select: none; /* Old versions of Firefox */
-				-ms-user-select: none; /* Internet Explorer/Edge */
-				user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+			body{overflow: hidden;overflow-y: auto;font-family: 'Poppins',sans-serif;min-height: 100vh;transition:all 2s ease; -webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
 				}
 			.dgc{display:grid!important;place-items:center!important}
 			.h-100-auto{min-height: 100vh}
@@ -129,7 +128,6 @@
 
 		
 			 .cube-container {
-				/*animation: swing ease-in-out 1.2s infinite alternate;		 	*/
 			 	padding: 0;
 			 	margin: 0;
 			 	height: 100vh;
@@ -144,7 +142,6 @@
 			.cube-container .cube {
 				transform: rotateX(0deg) rotateY(45deg);
 				transition: transform 2s ease-in;
-				/*transform: rotateY(10deg) rotateX(10deg);*/
 				transform-style: preserve-3d;
 				width: 20vw;
 				height: 20vw;
@@ -208,14 +205,6 @@
 				background-size: 15vw auto;
 				background-position: center;
 			}
-			/*.side.left .side-masking,.side.front .side-masking{
-				background: url(https://cdn.statically.io/img/kebumenarchive.com/content/upload/2021/01/1610419832_04fe4540a6b273701691.webp) no-repeat, #111;
-				background-size: 120% 80%;
-				background-position: left -200% center;
-			}
-			.side.front .side-masking{
-				background-position: right -200% center;
-			}*/
 			.side-masking{
 			 	border: 1px solid rgba(255,255,255,.1);	
 				background: #111;
@@ -252,7 +241,6 @@
 					height: 100vh;
 				}
 				100%{
-					/*z-index: -1;*/
 					overflow: hidden;
 					width: 100vw;
 					height: 100vh;
@@ -288,7 +276,6 @@
 			}
 			.cube-content{
 				background: url(https://cdn.statically.io/img/kebumenarchive.com/q=40/content/upload/2021/03/1616384223_0db6dfb4a15d34d48039.webp);
-				/*background: url(https://i.pinimg.com/236x/91/a0/29/91a0291e74bcd29ae27e32312891d4a4.jpg);*/
 				background-attachment: fixed;
 				display:none;
 				height:auto;
@@ -415,13 +402,10 @@
 				.swing-bucket .swing-circle{
 					background: #ddd;
 					border-radius: 50%;
-					/*float: left;*/
-					/*transfrom*/
 					left: 50%;
 					top: 50%;
 					transform:translate(-50%,-50%);
 					position: absolute;
-					/*left: 15%;*/
 					width: 80%;
 					padding-top: 80%;
 				}
@@ -436,9 +420,6 @@
 					left: 15%;
 					width: 70%
 				}
-/*
-				.swing-content{width: 100%;overflow: hidden;padding-top: 100%}
-				.swing-content img{max-width: 10%;position: absolute;bottom: 0px;left: 0px}*/
 				 
 				@keyframes swing {
 					0% { transform: rotate(3deg); }
@@ -748,12 +729,12 @@
 			border-top: 20px solid #7f0000;
 			border-right: 40px solid transparent;
 		}
-		.navbar-menu.active{/*transform: scale(1)*/;transition: all 1s ease;}
+		.navbar-menu.active{;transition: all 1s ease;}
 		
 		.navbar-toggle{width: 80px;border-radius: 50%;margin-top: 5px;position: relative;background: White;padding-top: 80px;overflow: hidden;box-shadow: 2px 2px 1px rgba(0,0,0,.7)}
-		.navbar-toggle:hover{/*transform: scale(.8)*/;cursor: pointer;}
+		.navbar-toggle:hover{;cursor: pointer;}
 		.navbar-toggle img{position:  absolute;top: 0px;left: auto;bottom: 0;right: 0;object-fit: cover;height: 80%;width: 80%;margin-top: 10%}
-		.navbar-toggle.inactive{transform: /*scale(0)*/;transition: all .5s ease}
+		.navbar-toggle.inactive{transition: all .5s ease}
 
 		.logo-effect{width: 80px;height: 80px;background: radial-gradient(circle at 20% 20%,  rgba(255,255,255,.3),rgba(0,0,0,.6));position: absolute;top: 0px;z-index: 10000;opacity: .8}
 
@@ -775,3 +756,184 @@
 			}
 		}
 	
+
+
+	/**/
+
+
+		.userIDWrapper {
+			position: relative;
+			width: 230px;
+			height: 100vh;
+			margin: 0 auto 0 auto;
+			perspective: 200vw;
+		}
+
+		.userIDContainer {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			height: auto;		
+			transform-style: preserve-3d;
+		}
+		.userIDContainer:hover {
+			animation-play-state: paused;
+		}
+
+		.userIDSlide {
+			position: absolute;
+			top: 50%!important;
+			left: 10px;
+			width: 100%;
+			height: auto;
+			-webkit-box-reflect: below 4px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(80%, transparent) , to(rgba(250, 250, 250, 0.1)));
+		}
+
+
+		@keyframes swirl {   
+			from {
+				transform:translateY(-50%) rotateY(-360deg);
+			}
+			to {
+				transform:translateY(-50%) rotateY(0deg);
+			}
+		} 
+
+		.cardID {
+			color: DarkSlateGrey;
+			background: rgba(255,255,255,.99);
+			border: 1px solid rgba(0,0,0,0.1);
+			border-radius: 10px;
+			width: 100%;
+			padding-top: 120%;
+			transition: transform 1s;
+			transform-style: preserve-3d;
+			cursor: pointer;
+			position: relative;
+		}
+
+
+		.cardID:hover {
+			transform: rotateY(180deg);
+		}
+
+		.cardID__face {
+			top: 50%;
+			left: 0%;
+			position: absolute;
+			width: 100%;
+			height: auto;
+			text-align: center;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
+
+		.cardID-front {
+			-webkit-transform: scaleX(-1);
+			transform: scaleX(-1) translateY(-50%) translateZ(100px)
+		}
+
+		.cardID-back {
+			transform: rotateY(180deg) scaleX(-1) translateY(-50%) translateZ(100px)
+		}
+
+
+		.user-card{background: White;border: 1px solid #ddd;border-radius: 4px}
+		.user-name{text-align: center;}
+		.user-position,.user-email{text-align: center;font-size: .9em;color: DarkGrey}
+		.user-email{font-size: .8em;margin-bottom: 10px}
+		.user-image{width: 50%;padding-top: 50%;margin: 10px auto}
+
+		.user-sosmed{width: 100%;display: flex;padding:10px 10%;text-align: center;margin-bottom: 10px;background: white}
+		.user-sosmed .fab{text-shadow: 0px 7px 2px blackcolor: rgb(0,0,0,.8);text-decoration: none;width: 100%;font-size: calc(100% + 10px)}
+		.user-sosmed .fab:hover{cursor: pointer}
+		.user-sosmed .fa-facebook:hover{color: blue;}
+		.user-sosmed .fa-twitter:hover{color: DodgerBlue;}
+		.user-sosmed .fa-instagram:hover{color: red;}
+
+		.userIDSlide:nth-child(1){transform: rotateY(0deg) translateZ(-312px) translateY(-50%);}
+		.userIDSlide:nth-child(2){transform: rotateY(60deg) translateZ(-312px) translateY(-50%);}
+		.userIDSlide:nth-child(3){transform: rotateY(120deg) translateZ(-312px) translateY(-50%);}
+		.userIDSlide:nth-child(4){transform: rotateY(180deg) translateZ(-312px) translateY(-50%);}
+		.userIDSlide:nth-child(5){transform: rotateY(240deg) translateZ(-312px) translateY(-50%);}
+		.userIDSlide:nth-child(6){transform: rotateY(300deg) translateZ(-312px) translateY(-50%);}
+
+		@media(max-width: 600px){
+			.userIDWrapper {
+				width: 100vw;
+			}		
+			.user-image{width: 20%;padding-top: 20%;margin: 10px auto}	
+
+			.userIDSlide:nth-child(1),
+			.userIDSlide:nth-child(2),
+			.userIDSlide:nth-child(3),
+			.userIDSlide:nth-child(4),
+			.userIDSlide:nth-child(5),
+			.userIDSlide:nth-child(6){transform: rotateY(0deg) translateZ(0px) translateY(0%) !important;display: none;}
+			.userIDSlide:nth-child(3){display: block;}
+
+
+			.userIDWrapper {
+				position: static;
+				width: 100%;
+				min-height: 100vh;
+				perspective: 0px;
+			}
+
+			.userIDContainer {
+				position: static;
+				top: 0px!important;
+				width: 100%;
+				transform-style: flat;
+			}
+			.userIDContainer:hover {
+				animation-play-state: paused;
+			}
+
+			.userIDSlide {
+				position: absolute;
+				min-height: 100vh;
+				background: White;
+				top: 0%!important;
+				left: 0px;
+				-webkit-box-reflect: unset!important;
+			}
+
+
+
+			.cardID {
+				padding-top: 10%;
+				border: none!important;
+				border-radius: 0px;
+				transform-style: flat;
+				cursor: pointer;
+				position: static;
+			}
+
+			.userIDSlide .user-name{
+				display: none;
+			}
+
+			.cardID:hover {
+				transform: unset;
+			}
+
+			.cardID__face {
+				top: 0%!important;
+				left: 0%;
+				position: static;
+				-webkit-backface-visibility: unset;
+				backface-visibility: unset;
+			}
+
+			.cardID-front {
+				-webkit-transform: unset;
+				transform: scaleX(1) translateY(0%) translateZ(0px)!important
+			}
+
+			.cardID-back {
+				transform: unset;
+			}
+
+			.user-card{border: none!important;border-radius: 0px!important}
+		}
